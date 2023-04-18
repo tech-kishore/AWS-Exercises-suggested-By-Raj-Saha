@@ -1,4 +1,4 @@
-# AWS-Exercises-suggested-By-Raj-Saha
+# AWS-Exercises-suggested-By-Raj-Saha (https://www.youtube.com/@cloudwithraj)
 
 1. microservice: <a href="https://github.com/saha-rajdeep/serverless-lab">LINK</a>
 2. event driven architecture: <a href="https://catalog.us-east-1.prod.workshops.aws/workshops/63320e83-6abc-493d-83d8-f822584fb3cb/en-US/eventbridge">LINK</a>
