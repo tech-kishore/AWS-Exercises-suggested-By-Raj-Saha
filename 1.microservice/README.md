@@ -3,10 +3,16 @@
 **Resource:** <a href="https://github.com/saha-rajdeep/serverless-lab">LINK</a>
 
 **Services:**
-1. API Gateway - DynamoDBManager | POST
+
+1. DynamoDB - lambda-apigateway | Primary key – id (string)
 2. Lambda function - lambda-function-over-https-create
 3. IAM Role(For Lambda function) -  lambda-apigateway-role
-4. DynamoDB - lambda-apigateway | Primary key – id (string)
+4. API Gateway - DynamoDBManager | POST
+
+REST API - DynamoDBOperations
+Resource - DynamoDBManager | Resource Path - /dynamodbmanager
+Method - POST
+
 
 
 ## DynamoDB - [lambda-apigateway]
@@ -51,6 +57,12 @@
     ]
 }
 ```
+
+## API Gateway
+
+- REST API - DynamoDBOperations
+- Resource - DynamoDBManager | Resource Path - /dynamodbmanager
+- Method - POST
 
 
 
