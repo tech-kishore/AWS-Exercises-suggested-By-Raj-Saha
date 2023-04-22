@@ -11,7 +11,8 @@
 ## Role [lambda-apigateway-role]
 
 **Permissions** 
-– DynamoDB
+
+- DynamoDB
 - CloudWatch Logs.
 
 **Policy**
