@@ -64,6 +64,46 @@ Method - POST
 - Resource - DynamoDBManager | Resource Path - /dynamodbmanager
 - Method - POST
 
+### GET Method - https://repost.aws/knowledge-center/pass-api-gateway-rest-api-parameters
+
+```
+import boto3
+import json
+
+def lambda_handler(event, context):
+    '''
+        - tableName: required for operations that interact with DynamoDB
+    '''
+    
+    client = boto3.client('dynamodb')
+    
+    # search_id=event["queryStringParameters"]['key']
+    search_id=event['key']
+    try:
+        response=client.get_item(
+            TableName='lambda-apigateway',
+            Key={
+                'id':{'S':search_id}
+            }
+        )
+        
+        data=response['Item']
+
+        statusCode=response['ResponseMetadata']['HTTPStatusCode']
+    
+        return {
+            'statusCode': statusCode,
+            'items': json.dumps(data),
+        }
+    except KeyError as e:
+        #Send to logs
+        # print(e)
+        return {
+            'statusCode': 200,
+            'items': json.dumps({}),
+        }
+```
+
 
 
 
