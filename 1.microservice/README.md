@@ -63,8 +63,11 @@ Method - POST
 - REST API - DynamoDBOperations
 - Resource - DynamoDBManager | Resource Path - /dynamodbmanager
 
+![image](https://user-images.githubusercontent.com/124598875/234563554-394036dc-bc74-419a-b003-097ad187bad3.png)
 
-### GET Method - https://repost.aws/knowledge-center/pass-api-gateway-rest-api-parameters
+
+
+### Lambda function Code: GET Method - https://repost.aws/knowledge-center/pass-api-gateway-rest-api-parameters
 
 ```
 import boto3
@@ -103,7 +106,7 @@ def lambda_handler(event, context):
         }
 ```
 
-### POST Method -
+### Lambda function Code: POST Method
 
 ```
 import boto3
