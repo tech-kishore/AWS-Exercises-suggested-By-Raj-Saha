@@ -77,7 +77,6 @@ def lambda_handler(event, context):
     
     client = boto3.client('dynamodb')
     
-    # search_id=event["queryStringParameters"]['key']
     search_id=event['key']
     try:
         response=client.get_item(
@@ -115,7 +114,6 @@ def lambda_handler(event, context):
         - tableName: required for operations that interact with DynamoDB
     '''
     
-    
     client = boto3.client('dynamodb')
     
     response=client.put_item(
@@ -128,10 +126,8 @@ def lambda_handler(event, context):
     
     statusCode=response['ResponseMetadata']['HTTPStatusCode']
     
-    # TODO implement
     return {
         'statusCode': statusCode,
-        # 'items': json.dumps(response['Item']),
     }
 
 ```
